@@ -4,7 +4,7 @@ import { useCallback, useEffect } from "react";
 import { Link as WakuLink } from "waku";
 import {
   type LinkProps,
-  useRouter_UNSTABLE as useRouter,
+  useRouter,
 } from "waku/router/client";
 import { useAtom } from "jotai";
 import { navigatingAtom } from "../atoms";

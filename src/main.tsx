@@ -1,10 +1,19 @@
-import { StrictMode, Suspense } from "react";
+import { startTransition, StrictMode } from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { Router } from "waku/router/client";
 
 const rootElement = (
   <StrictMode>
     <Router />
+    {/* <Router unstable_enhanceCreateData={(createData) => {
+      return async (responsePromise) => {
+        console.log("calling createData");
+        const createDataPromise = createData(responsePromise);
+        console.log("awaited response promise", await responsePromise);
+        console.log("awaited createData promise", await createDataPromise);
+        return createDataPromise;
+      };
+    }} /> */}
   </StrictMode>
 );
 
